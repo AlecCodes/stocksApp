@@ -6,6 +6,7 @@ import App from './App'
 import Dashboard from "./Pages/Dashboard"
 import About from "./Pages/About"
 import Stock from "./Pages/Stock"
+import {priceLoader} from './Loader'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -13,7 +14,7 @@ const router = createBrowserRouter(
             <Route path = "" element={<Home/>}/>
             <Route path = "dashboard" element={<Dashboard/>}/>
             <Route path = "about" element={<About/>}/>
-            <Route path = "stock/:symbol" element={<Stock/>}/>
+            <Route path = "stock/:symbol" element={<Stock/>} loader={priceLoader}/>
         </Route>
     ) 
 )

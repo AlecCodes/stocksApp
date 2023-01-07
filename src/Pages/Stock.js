@@ -1,5 +1,15 @@
+import {useLoaderData} from "react-router-dom"
+
 const Stock = (props) => {
-    return <h1>Stock PAGE</h1>
+    const stock = useLoaderData();
+    return(
+        <div>
+            <h1>STOCK PAGE SHOW</h1>
+            <h1>
+                {stock[0].price}
+            </h1>
+        </div>
+    )
 }
 
 export default Stock
